@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost/blubber_app");
+
 var routes = require('./config/routes');
 
 var app = express();
